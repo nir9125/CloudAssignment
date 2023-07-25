@@ -1,0 +1,16 @@
+server:
+  port: 9999
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: mongo-database
+          uri: http://localhost:8092
+          predicates:
+            - Path=/news/**
+
+        - id: blog-app
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v2/**
+
