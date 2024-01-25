@@ -14,7 +14,7 @@ import java.util.Date;
 @Component
 public class BlogAspect {
 
-    @Around(value = "execution(* com.stackroute.blog_assignment.service.BlogServiceDaoImp.addBlog(..))")
+    @Around(value = "execution(* com.stackroute.JpaAssignmentBlog.service.BlogServiceDaoImpl.addBlog(..))")
     public Blog aroundAdviceForAddBlog(ProceedingJoinPoint joinPoint){
         System.out.println("Inside Around Advice in Aspect : Business logic to Save patient started at "+ new Date());
         try

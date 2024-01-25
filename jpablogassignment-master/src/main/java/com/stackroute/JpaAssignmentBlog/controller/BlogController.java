@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1")
+@RequestMapping("blog")
 public class BlogController {
     @Autowired
     BlogServiceDaoImpl service;
@@ -29,7 +29,7 @@ public class BlogController {
     }
 
     //to view all data
-    @GetMapping("allview")
+    @GetMapping("viewall")
     public ResponseEntity<?> fetchAllBlog(){
         List<Blog> list = service.viewAllBlog();
         return new ResponseEntity<List>(list, HttpStatus.OK);

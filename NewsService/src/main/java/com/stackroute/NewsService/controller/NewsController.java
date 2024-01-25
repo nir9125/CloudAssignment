@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("api/v1")
+@RequestMapping("news")
 public class NewsController {
 
     @Autowired

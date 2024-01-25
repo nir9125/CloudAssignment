@@ -14,7 +14,7 @@ import java.util.Date;
 @Component
 public class NewsAspect {
 
-    @Around(value = "execution(* com.stackroute.Newz.mongodb.service.NewsServiceImpl.addNews(..))")
+    @Around(value = "execution(* com.stackroute.NewsService.service.NewsServiceDaoImpl.addNews(..))")
     public News aroundAdviceForAddNews(ProceedingJoinPoint joinPoint){
         System.out.println("Inside Around Advice in Aspect : Business logic to Save patient started at "+ new Date());
         try
@@ -25,7 +25,7 @@ public class NewsAspect {
             news.setNewsId("912");
             news.setAuthor("Shay is a good boy");
             news.setTitle("Niranjan ");
-            news.setDescription("ram is ram, ram is ram");
+            news.setDescription("niranjan is niranjan");
             news.setContent("This is the content section for the news");
             news.setUrl("this is url holder");
             news.setUrlToIamge("this will contain the url to image");
